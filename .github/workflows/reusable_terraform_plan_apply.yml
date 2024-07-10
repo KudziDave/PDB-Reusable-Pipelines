@@ -47,10 +47,10 @@ jobs:
         working-directory: ${{ inputs.working_directory }}
         run: terraform plan
 
-      # - name: Terraform Apply
-      #   working-directory: ${{ inputs.working_directory }}
-      #   run: terraform apply -auto-approve
-
-      - name: Terraform Destroy
+      - name: Terraform Apply
         working-directory: ${{ inputs.working_directory }}
-        run: terraform destroy -auto-approve 
+        run: terraform apply -auto-approve
+
+      # - name: Terraform Destroy
+      #   working-directory: ${{ inputs.working_directory }}
+      #   run: terraform destroy -auto-approve 
